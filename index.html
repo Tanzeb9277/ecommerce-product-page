@@ -7,6 +7,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
   
   <title>Frontend Mentor | E-commerce product page</title>
 
@@ -19,9 +21,13 @@
 <body>
 
   <div class="nav">
+    <div id="menu-open">
+      <img src="images/icon-menu.svg" alt="menu">
+    </div>
     <h2>sneakers</h2>
     <ul class="nav-options">
-      <li>Collections</li>
+      <div id="menu-close"><img src="images/icon-close.svg" alt="close"></div>
+      <li><a href="#">Collections</a></li>
       <li>Men</li>
       <li>Women</li>
       <li>About</li>
@@ -29,33 +35,109 @@
     </ul>
     <div class="account-option">
       <div class="cart">
-
+        <div class="item-count-bubble">
+          0
+        </div>
+        <img id='cart'src="images/icon-cart.svg" alt="cart">
+        <div class="close-cart">
+          <div class="cart-header">Cart</div>
+          <div class="cart-items">
+            <div class="empty-cart">
+              <p>Your cart is empty</p>
+            </div>
+            <div class="filled-cart ">
+              <div class="cart-item">
+                <div class="cart-item-image">
+                  <img src="images/image-product-1-thumbnail.jpg" alt="cart-item-image">
+                </div>
+                <div class="cart-item-info">
+                  <div class="cart-item-name">
+                    Fall Limited Edition Sneakers
+                  </div>
+                  <div class="cart-item-summary">
+                    <p>$125.00 x <span class="cart-item-quantity">0</span> <span class="cart-item-total"></span></p>
+                  </div>
+                </div>
+                <div class="delete-item">
+                  <img src="images/icon-delete.svg" alt="delete">
+                </div>
+              </div>
+              <div class="checkout-btn">
+                <p>Checkout</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="profile">
-        
+        <img src="images/image-avatar.png" alt="avatar">
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="product-images">
+      <div id="lightbox">
+        <div class="current-image">
+          <div id="previous-image">
+            <img src="images/icon-previous.svg" alt="previous">
+          </div>
+          <img id="current-image" src="images/image-product-1.jpg" alt="product-image">
+          <div id="next-image">
+            <img src="images/icon-next.svg" alt="next">
+          </div>
+        </div>
+        <div class="lightbox-iamge-selector">
+          <img class="open-btn selected-img" src="images/image-product-1-thumbnail.jpg" alt="product image" data-img="1">
+          <img class="open-btn" src="images/image-product-2-thumbnail.jpg" alt="product image" data-img="2">
+          <img class="open-btn" src="images/image-product-3-thumbnail.jpg" alt="product image" data-img="3">
+          <img class="open-btn" src="images/image-product-4-thumbnail.jpg" alt="product image" data-img="4">
+        </div>
+        <button class="close-btn"><img src="images/icon-close.svg" alt="close"></button>
+      </div>
+      <div id="featured-image" >
+        <img src="images/image-product-1.jpg" alt="">
+      </div>
+      <div class="product-iamge-selector">
+        <img class="open-btn selected-img" src="images/image-product-1-thumbnail.jpg" alt="product image" data-img="1">
+        <img class="open-btn" src="images/image-product-2-thumbnail.jpg" alt="product image" data-img="2">
+        <img class="open-btn" src="images/image-product-3-thumbnail.jpg" alt="product image" data-img="3">
+        <img class="open-btn" src="images/image-product-4-thumbnail.jpg" alt="product image" data-img="4">
+      </div>
+    </div>
+    <div class="product-description">
+      <h6 class="company-name">SNEAKER COMPANY</h6>
+
+      <h2 class="product-name">Fall Limited Edition Sneakers</h2>
+
+      <p class="description">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+      <div class="price">
+        <p class="current-price">$125.00<span class="disscount">50%</span></p>
+        <p class="previous-price"><s>$250.00</s></p>
+      </div>
+      
+
+      <div class="add-to-cart">
+        <div class="quantity-selector">
+          <img id="decrease-quantity" src="images/icon-minus.svg" alt="icon-minus">
+          <p id="item-quantity">0</p>
+          <img id="increase-quantity" src="images/icon-plus.svg" alt="plus">
+        </div>
+        <div class="add-to-cart-btn">
+          <img src="images/icon-cart-white.svg" alt="cart">
+          <p>Add to cart</p>
+        </div>
       </div>
     </div>
   </div>
 
  
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  
 </body>
 </html>
+
